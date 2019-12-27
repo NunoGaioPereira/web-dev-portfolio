@@ -2,27 +2,70 @@
 <html>
 <head>
 	<title>Portofolio test 1</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The official website of the violinist André Gaio Pereira, Portuguese Young Musician of the Year 2017.">
+	<meta property="og:url" content="https://www.andregaiopereira.com" />
+	<meta property="og:type" content= "website" />
+	<meta property="og:title" content="André Gaio Pereira - Violin" />
+	<meta property="og:description" content="The official website of the violinist André Gaio Pereira, Portuguese Young Musician of the Year 2017." />
+	<meta property="og:image" content="https://www.andregaiopereira.com/img/opengraphics.png" />
+	<!--<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>-->
+	<script src="js/jquery-3.2.1.min.js" ></script>
+
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 <body>
 	<nav class="clearfix">
-		<div class="logo">homescape.</div>
+		<div class="logo">NGP</div>
 		<ul>
 			<li><a href="">Home</a></li>
 			<li><a href="">About</a></li>
+			<li><a href="">Portfolio</a></li>
+			<li><a href="">Contact</a></li>
 		</ul>
 	</nav>
 	<div class="hero">
 		<div class="hero-content">
-			<h3>Housing, made simple.</h3>
-			<h1>HomeScape</h1>
-			<a href="">READ MORE</a>
+			<div class="text">
+				<h1>Designer and Web Developer</h1>
+				<h3>Housing, made simple.</h3>
+				<a href="">READ MORE</a>
+			</div>
+			
+		</div>
+		<div class="hero-col">
+			<img src="./img/back2.jpg">
 		</div>
 	</div>
+	<section class="about">
+		<h2>About</h2>
+	</section>
 
 	<div class="newsletter">
 		<h3>Blah dald ajskdl</h3>
 		<p>T dga da dh iwhe aldh ahla dlhasl dla lahdla sdklajl lkajsd lkajs ladjs lkdja dlkjas lkdja ldkaj dlksaj d.</p>
 	</div>
+
+	<script src="./js/main.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(function() {
+			  $(window).scroll(function() {
+			     if($(window).scrollTop() >= 100) {
+			       $('nav').addClass('scrolled');
+			     }
+			    else {
+			      $('nav').removeClass('scrolled');
+			    }
+
+
+			  });
+			});
+		});
+
+	</script>
 </body>
 </html>
