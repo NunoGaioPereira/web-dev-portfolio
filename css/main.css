@@ -1,5 +1,6 @@
 :root {
 	--main-color: #0346E4;
+	/*--main-color: #0f0f0f;*/
 	--secondary-color: #2868ff;
 	--nav-height: 60px;
 }
@@ -28,7 +29,8 @@ nav {
 	width: 100%;
 	height: var(--nav-height);
 	position: fixed;
-	/*border-bottom: 1px solid #ddd;*/
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.3);
 	transition: all 0.3s ease-in-out;
 	line-height: var(--nav-height);
 	z-index: 50;
@@ -38,12 +40,20 @@ nav .logo {
 	width: 100px;
 	display: inline-block;
 	float: left;
-	margin-left: 30px;
+	margin-left: 80px;
 	font-weight: bold;
 	font-size: 25px;
 	color: var(--main-color);
 	transition: all 0.3s ease-in-out;
 }
+
+nav .logo img {
+	width: 200px;
+	top: 10px;
+	position: relative;
+}
+
+
 
 nav ul {
 	list-style: none;
@@ -88,6 +98,7 @@ nav.scrolled {
 nav.scrolled .logo {
 	color: #fff;
 } 
+
 nav.scrolled ul li a {
 	color: #fff;
 }
@@ -155,32 +166,108 @@ nav.scrolled ul li a {
 }
 
 
-.about {
-	padding: 100px 50px;
-	background-color: #f0f0f0;
+.portfolio {
 	text-align: center;
+	background-color: #f5f5f5;
+	padding: 40px;
 }
 
-.about h2 {
-	color: var(--main-color);
+.portfolio h2 {
+	margin-bottom: 15px;
 }
 
-.about h2:after {
-	content: '';
-	width: 60px;
-	height: 3px;
-	background-color: var(--main-color);
+.portfolio .gallery {
+	padding: 40px 0 80px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	//max-width: 800px;
+	margin: 0 auto;
+}
+
+.portfolio .gallery .img-block {
+	transition: opacity 0.25s ease-in-out;
+	margin: 3px;
+	display: flex;
+	cursor: pointer;
 	position: relative;
-	margin: 10px auto;
-	display: block;
 }
 
+.portfolio .gallery .img-block:hover .overlay{
+	opacity: 1;
+}
+
+.portfolio .gallery .img-block .overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 20;
+	background-color: rgba(0,0,0,0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	opacity: 0;
+	color: #fff;
+	transition: all 0.25s ease-in-out;
+}
+
+.portfolio .gallery .img-block .overlay a {
+	padding: 10px; 
+	background-color: #010101;
+	color: #ffffff;
+	margin: 5px 5px;
+	text-decoration: none;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.portfolio .gallery .img-block .overlay a:hover {
+	background-color: #111;
+}
+
+.portfolio .gallery img {
+	//margin: 5px;
+	//max-width: 100%;
+	//width: 250px;
+	width: 100%;
+}
+
+.portfolio .image {
+	display: flex;
+}
+
+.portfolio .image:hover ~ .portfolio .image:after {
+	background-color: rgba(0,0,0,0.3);
+	display: block;
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+}
+
+.portfolio .to-contact {
+	text-decoration: none;
+	//background-color: #010101;
+	color: #111;
+	padding: 10px 14px;
+	font-weight: 500;
+	transition: background-color 0.25s ease-in-out;
+	border: 2px solid #010101;
+}
+
+.portfolio .to-contact:hover {
+	background-color: #010101;
+	color: #fff;
+	//box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
 
 .newsletter {
 	padding: 80px 40px;
 	background-color: var(--main-color);
 	color: #fff;
 }
+
 
 .footer {
 	padding: 30px;
@@ -192,13 +279,13 @@ nav.scrolled ul li a {
 
 .test {
 	padding: 80px 20px;
-	background-color: #fff;
+	background-color: #f9f9f9;
 	text-align: center;
 }
 
 .test h2 {
 	color: #111;
-	margin-bottom: 50px;
+	//margin-bottom: 50px;
 }
 
 .test h2:after {
@@ -207,8 +294,13 @@ nav.scrolled ul li a {
 	height: 3px;
 	background-color: #111;
 	position: relative;
-	margin: 10px auto;
+	margin: 10px auto 15px;
 	display: block;
+}
+
+.test p {
+	margin: 0 auto 30px;
+	max-width: 800px;
 }
 
 .test .row {
@@ -229,7 +321,7 @@ nav.scrolled ul li a {
 	text-align: center;
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
-
+	box-shadow: 0px 5px 15px rgba(10, 20, 30, 0.1);
 }
 
 .test .row .col h3 {
@@ -237,8 +329,12 @@ nav.scrolled ul li a {
 }
 
 .test .row .col img {
-	width: 60px;
-	margin-bottom: 20px;
+	width: 50px;
+	margin-bottom: 15px;
+}
+
+.test .row .col p {
+	margin: 0;
 }
 
 .test .row .col:hover {
@@ -296,6 +392,9 @@ nav.scrolled ul li a {
 
 .quote {
 	background-color: var(--main-color);
+	//background: url('../img/back1.jpg');
+	background-size: cover;
+	background-position: bottom;
 	padding: 50px 40px;
 }
 
@@ -303,16 +402,22 @@ nav.scrolled ul li a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;	
+	flex-direction: column;
 	max-width: 900px;
 	margin: 0 auto;
 	color: #fff;
+}
+
+.quote-content h3 {
+	margin-bottom: 30px;
 }
 
 .quote-content a {
 	color: #fff;
 	text-decoration: none;
 	font-weight: 600;
-	padding: 14px;
+	padding: 10px 14px;
+	border-radius: 50px;
 	border: 2px solid #fff;
 	transition: all 0.3s ease-in-out;
 }
@@ -320,4 +425,93 @@ nav.scrolled ul li a {
 .quote-content a:hover {
 	color: var(--main-color);
 	background-color: #fff;
+}
+
+.full {
+	height: 100vh;
+	background-image: url('../img/back1.jpg');
+	background-size: cover;
+	background-position: bottom;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.full div {
+	max-width: 500px;
+	padding: 40px 30px 50px;
+	background-color: rgba(255,255,255,0.8);
+}
+
+.full div h3 {
+	margin-bottom: 30px;
+	font-size: 26px;
+}
+
+/*
+.menu {
+	width: 100%;
+	//background-color: lightgray;
+	height: 160px;
+}
+
+.menu div {
+	max-width: 960px;
+	margin: 0 auto;
+	background-color: #fff;
+	height: 80px;
+	box-shadow: -1px 4px 74px -16px rgba(0,0,0,.3);
+	transform: translateY(-40px);
+}
+*/
+
+.contact {
+	text-align: center;
+	padding: 40px 30px;
+}
+
+.contact form {
+	max-width: 500px;
+	margin: 30px auto;
+	text-align: left;
+}
+
+.contact form input {
+	width: 100%;
+	display: block;
+	padding: 10px;
+	margin: 0 0 20px;
+}
+
+.contact form label {
+	margin-bottom: 5px;
+	display: block;
+	font-weight: 500;
+}
+.contact form textarea {
+	width: 100%;
+	padding: 10px;
+	height: 150px;
+}
+
+.contact form .btn-submit {
+	background-color: var(--main-color);
+	color: #fff;
+	font-weight: 600;
+	outline: none;
+	border: none;
+	max-width: 300px;
+	padding: 15px 0;
+	margin: 20px auto;
+	cursor: pointer;
+	transition: all 0.25s ease-in-out;
+	font-size: 16px;
+}
+
+.contact form .btn-submit:hover {
+	background-color: #111;
+}
+
+.contact form input,.contact form textarea {
+	border: 2px solid #111;
 }

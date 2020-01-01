@@ -18,7 +18,9 @@
 </head>
 <body>
 	<nav class="clearfix">
-		<div class="logo">NGP</div>
+		<div class="logo">
+			<a href=""><img src="./img/logo1.png"></a>
+		</div>
 		<ul>
 			<li><a href="">Home</a></li>
 			<li><a href="">About</a></li>
@@ -39,18 +41,10 @@
 			<img src="./img/back2.jpg">
 		</div>
 	</div>
-	<section class="about">
-		<h2>About</h2>
-		<p>I am a freelance web developer and designer with years of experience. Find below what I can offer you.</p>
-	</section>
-	<section class="mind">
-		<a href=""><span>Projeto em mente?</span><span>Start now!</span></a>	
-
-		<!--<a href="#contact-section" class="btn btn-animated btn-split btn-dark ripple-alone" data-text="projecto em mente?">PROJECT IN MIND? <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vamos a isso&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;</span></a>-->
-	</section>
 
 	<section class="test">
-		<h2>Services</h2>
+		<h2>About</h2>
+		<p>I am a freelance web developer and designer with years of experience. Find below what I can offer you.</p>
 		<div class="row">
 			<div class="col">
 				<img src="./img/rocket.png">
@@ -70,27 +64,58 @@
 		</div>
 	</section>
 
-	<div class="newsletter">
-		<h3>Blah dald ajskdl</h3>
-		<p>T dga da dh iwhe aldh ahla dlhasl dla lahdla sdklajl lkajsd lkajs ladjs lkdja dlkjas lkdja ldkaj dlksaj d.</p>
-	</div>
-
-	<section class="portfolio">
-		<h2>Portfolio</h2>
-		<p>Find some of my most recent work below.</p>
-	</section>
+	
 
 	<section class="quote">
 		<div class="quote-content">
 			<h3>Like what you see? Let's get started</h3>
-			<a href="">GET A QUOTE</a>
+			<a href="">Start now!</a>
 		</div>
 	</section>
+
+
+	<section class="portfolio">
+		<h2>Portfolio</h2>
+		<p>Find some of my most recent work below.</p>
+		<div class="gallery">
+			<!--<a href="" class="image"><img src="./img/ig1.jpg"></a>
+			<a href="" class="image"><img src="./img/ig1.jpg"></a>
+			<a href="" class="image"><img src="./img/ig1.jpg"></a>
+			<a href="" class="image"><img src="./img/ig1.jpg"></a>
+			<a href="" class="image"><img src="./img/ig1.jpg"></a>
+			<a href="" class="image"><img src="./img/ig1.jpg"></a>-->
+			<div class="img-block">
+				<img src="img/ig2.jpg">
+				<div class="overlay">
+					<h3>Musician Website</h3>
+					<p>andregaiopereira.com</p>
+					<a href="">Expand</a>
+					<a href="">Visit</a>
+				</div>
+			</div>
+			<div class="img-block"><img src="img/ig3.jpg"></div>
+			<div class="img-block"><img src="img/ig4.jpg"></div>
+			<div class="img-block"><img src="img/ig5.jpg"></div>
+			<div class="img-block"><img src="img/ig6.jpg"></div>
+			<div class="img-block"><img src="img/ig1.jpg"></div>
+		</div>
+		<p><a href="" class="to-contact">Contact me</a></p>
+	</section>
+
 
 	<section class="contact">
 		<h2>Get In Touch</h2>
 		<p></p>
-		<a href="">Start here!</a>
+		<p>Drop me a message so we can start working together</p>
+		<form action="" method="POST">
+			<label>Name</label>
+			<input type="text" name="name" placeholder="Your name...">
+			<label>Email</label>
+			<input type="text" name="email" placeholder="Your email...">
+			<label>Message</label>
+			<textarea placeholder="Your message..." name="message"></textarea>
+			<input class="btn-submit" type="submit" value="Send">
+		</form>
 	</section>
 
 	<footer class="footer">
@@ -100,7 +125,7 @@
 	<script src="./js/main.js"></script>
 
 	<script type="text/javascript">
-		$(document).ready(function () {
+		/*$(document).ready(function () {
 			$(function() {
 			  $(window).scroll(function() {
 			     if($(window).scrollTop() > 100) {
@@ -113,7 +138,7 @@
 
 			  });
 			});
-		});
+		});*/
 
 	</script>
 </body>
