@@ -316,6 +316,7 @@ nav.scrolled ul li a {
 	background-color: #fff;
 	padding: 30px 20px;
 	border-radius: 2px;
+	margin: 20px 0;
 	flex: 30%;
 	max-width: 30%;
 	text-align: center;
