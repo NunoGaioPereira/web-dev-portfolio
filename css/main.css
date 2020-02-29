@@ -1,5 +1,5 @@
 :root {
-	--main-color: #0346E4;
+	--main-color: #0346E4; /* 4f8cf7 */
 	/*--main-color: #0f0f0f;*/
 	--secondary-color: #2868ff;
 	--nav-height: 60px;
@@ -341,6 +341,7 @@ nav.scrolled ul li a {
 .test .row .col:hover {
 	box-shadow: 0px 5px 15px rgba(10, 20, 30, 0.2);
 	transform: translateY(-12px);
+	color: var(--main-color);
 }
 
 .mind {
@@ -515,4 +516,8 @@ nav.scrolled ul li a {
 
 .contact form input, .contact form textarea {
 	border: 2px solid #111;
+}
+
+@media max-width(1200px) {
+	
 }
