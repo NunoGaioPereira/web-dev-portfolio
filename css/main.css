@@ -525,44 +525,13 @@ nav.scrolled ul li a {
 .tabs {
 	position: relative;
 	margin: 20px auto -10px;
-	width: 210px;
+	width: 250px;
 	height: 30px;
 	padding: 0;
 	font-size: 0;
 }
 
-.tabs .animation {
-	position: absolute;
-	padding: 0;
-	height: 100%;
-	top: 0;
-	z-index: 0;
-	background: var(--main-color);
-	border-radius: 50px;
-	transition: all .5s ease 0s;
-}
-
-.tabs .start-home, a:nth-child(1):hover~.animation {
-	width: 60px;
-	left: 0;
-}
-
-.tabs a:hover {
-	color: #fff;
-}
-
-.tabs .start-web, a:nth-child(2):hover~.animation {
-	width: 60px;
-	left: 60px;
-}
-
-.tabs .start-design, a:nth-child(3):hover~.animation {
-	width: 90px;
-	left: 120px;
-}
-
 .tabs a {
-	color: #fff;
 	text-decoration: none;
 	line-height: 30px;
 	/*margin: 0 10px;*/
@@ -571,10 +540,12 @@ nav.scrolled ul li a {
 	z-index: 1;
 	text-align: center;
 	font-size: 15px;
+	color: #141414;
+	margin: 0 10px;
 }
 
 .tabs a:nth-child(1) {
-	width: 60px;
+	width: 50px;
 }
 
 .tabs a:nth-child(2) {
@@ -582,5 +553,89 @@ nav.scrolled ul li a {
 }
 
 .tabs a:nth-child(3) {
-	width: 90px;
+	width: 80px;
+}
+
+
+.tabs .animation {
+	position: absolute;
+	padding: 0;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	background: #141414;
+	border-radius: 50px;
+	transition: all .5s ease 0s;
+}
+
+.tabs .start-home, a:nth-child(1):hover~.animation {
+	width: 50px;
+	left: 10px;
+}
+
+.tabs a:hover {
+	color: #fff;
+}
+
+.tabs .start-web, a:nth-child(2):hover~.animation {
+	width: 60px;
+	left: 80px;
+}
+
+.tabs .start-design, a:nth-child(3):hover~.animation {
+	width: 80px;
+	left: 160px;
+}
+
+.news {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 20px;
+}
+
+.news .col {
+	padding: 0 15px;
+}
+
+.news .col .news-col {
+	width: 33.33333333%;
+	box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    background: #ffffff;	
+    border-radius: 3px;
+    float: left;
+    overflow: hidden;
+}
+
+.news .news-col .news-image a img {
+	display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.news .news-col .news-info {
+	padding: 45px 35px;
+}
+
+.fa-clock-o {
+	margin-right: 5px;
+}
+
+.fa-clock-o:before {
+	content: "\f017";
+}
+
+small {
+	color: #1461ff;
+}
+
+span {
+	color: #777;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-left: 2px;
+}
+
+.news h4 {
+	color: #222;
 }
