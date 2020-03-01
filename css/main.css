@@ -594,16 +594,23 @@ nav.scrolled ul li a {
 }
 
 .news .col {
+	// margin: 0 15px;
+}
+
+.news .col .news-row {
 	padding: 0 15px;
+	position: relative;
 }
 
 .news .col .news-col {
-	width: 33.33333333%;
+	/*width: 33.33333333%;*/
+	width: 30%;
 	box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
     background: #ffffff;	
     border-radius: 3px;
     float: left;
     overflow: hidden;
+    margin: 0 15px;
 }
 
 .news .news-col .news-image a img {
@@ -636,6 +643,35 @@ span {
     margin-left: 2px;
 }
 
+.news a {
+	text-decoration: none;
+}
+
 .news h4 {
 	color: #222;
+	padding: 8px 0 12px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.news .news-btn {
+	padding: 20px 30px;
+	color: #fff;
+    font-size: 14px;
+    margin-top: 30px;
+    font-weight: 600;
+    background: linear-gradient(-45deg,rgba(88, 195, 255,.8) 0,rgba(0, 77, 230,.8) 40%,rgba(0, 59, 177,.8) 100%);
+    line-height: 10px;
+    border: none;
+    border-radius: 30px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out 0s;
+    display: inline-block;
+}
+
+.news .news-btn:hover {
+    color: #1461ff;
+    background: #fff;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px;
 }
