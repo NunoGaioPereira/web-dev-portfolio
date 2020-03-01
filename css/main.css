@@ -521,3 +521,59 @@ nav.scrolled ul li a {
 @media max-width(1200px) {
 	
 }
+
+.tabs {
+	position: relative;
+	margin: 50px auto;
+	width: 260px;
+	height: 30px;
+}
+
+.tabs .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	background-color: #1abc9c;
+	// width: 100px;
+	border-radius: 50px;
+	z-index: 0;
+	transition: all 0.5s ease 0s;
+}
+
+.tabs .start-home, a:nth-child(1):hover~.animation {
+	width: 50px;
+	left: 10px;
+}
+
+.tabs .start-home, a:nth-child(2):hover~.animation {
+	width: 50px;
+	left: 70px;
+}
+
+.tabs .start-home, a:nth-child(3):hover~.animation {
+	width: 100px;
+	left: 150px;
+}
+
+.tabs a {
+	color: #111;
+	text-decoration: none;
+	line-height: 30px;
+	margin: 0 10px;
+	position: relative;
+	display: inline-block;
+	z-index: 1;
+	text-align: center;
+}
+
+.tabs a:nth-child(1) {
+	width: 50px;
+}
+
+.tabs a:nth-child(2) {
+	width: 50px;
+}
+
+.tabs a:nth-child(3) {
+	width: 80px;
+}
