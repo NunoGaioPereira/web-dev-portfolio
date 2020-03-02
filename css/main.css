@@ -675,3 +675,39 @@ span {
     border: none;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px;
 }
+
+
+.project-hero {
+	text-align: center;
+}
+
+.project-hero .project-banner {
+	padding: calc(var(--nav-height) + 80px) 20px 80px;
+	background-color: #1a1a1a;
+	color: #fff;
+}
+
+.project-hero h4 {
+	font-size: 26px;
+}
+
+.contact-call {
+	padding: 0px 0 60px;
+	text-align: center;
+}
+
+.contact-call .to-contact {
+	text-decoration: none;
+	//background-color: #010101;
+	color: #111;
+	padding: 10px 14px;
+	font-weight: 500;
+	transition: background-color 0.25s ease-in-out;
+	border: 2px solid #010101;
+}
+
+.contact-call .to-contact:hover {
+	background-color: #010101;
+	color: #fff;
+	//box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
