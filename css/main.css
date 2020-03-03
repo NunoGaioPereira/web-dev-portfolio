@@ -751,8 +751,9 @@ span {
 	text-align: center;
 }
 
-.col h4 {
+.col .other-projects {
 	color: rgba(0, 59, 177,.8);
+	font-size: 30px;
 }
 
 
